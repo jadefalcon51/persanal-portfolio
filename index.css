@@ -8,6 +8,10 @@ html {
     padding: 0;
 }
 
+body {
+    font-family: 'ubuntu', sans-serif;
+}
+
 #nav-bar {
     display: flex;
 }
