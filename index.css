@@ -1,4 +1,40 @@
-h1 {
-    color: red;
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+} 
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcom-section {
+    height: 100vh;
+    background-color: aquamarine;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+figure {
+    margin: 1.5rem;
 }
