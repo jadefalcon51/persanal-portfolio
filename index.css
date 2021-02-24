@@ -128,6 +128,13 @@ figcaption {
   color: #ddd;
 }
 
+#profile-link {
+    text-decoration: none;
+    margin: 0 1.5em;
+    font-size: 1.25em;
+    color: white;
+  }
+
 /* profile class should become id when projects are ready */
 
 .profile-link {
