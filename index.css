@@ -47,6 +47,7 @@ body {
 .nav-list-items:hover {
   transform: translateY(-2.5px);
   transition: transform 0.3s ease-out;
+  border-color: var(--gray);
 }
 
 #welcome-section {
@@ -137,8 +138,7 @@ figcaption {
 }
 
 .profile-link:hover {
-  transform: translateY(-2.5px);
-  transition: transform 0.3s ease-out;
+    transform: translateY(-2.5em);
 }
 
 footer {
@@ -161,7 +161,7 @@ figcaption {
 }
 }
 
-@media (max-width: 400px) { 
+@media (max-width: 475px) { 
     html {
       font-size: 50%;
     }
@@ -170,6 +170,9 @@ figcaption {
     }
     figcaption {
         width: 90%;
+    }
+    .profile-link {
+        font-size: 65%;
     }
 
   }
