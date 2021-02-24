@@ -19,12 +19,12 @@ body {
 }
 
 #navbar {
-
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   background-color: tan;
+  box-shadow: 0 2.5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .nav-list-items {
@@ -76,9 +76,11 @@ figure {
 
 figcaption {
   text-align: center;
+  font-size: 1.25em;
+  font-weight: 600;
   padding: 12px 0px 12px 0px;
   background-color: aqua;
-  position: relative;
+  position: relative; 
   top: -6px;
 }
 
@@ -92,7 +94,8 @@ figcaption {
 }
 
 #contact {
-    height: 20em;
+  height: 20em;
+  background-color: rosybrown;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,17 +103,40 @@ figcaption {
   text-align: center;
 }
 
+#contact h2 {
+  font-size: 2em;
+}
+
+#contact p {
+  font-size: 1.25em;
+}
+
 #profile-link {
   text-decoration: none;
   margin: 0 1.5em;
   font-size: 1.25em;
+  color: white;
 }
 
-.profile-link {
-    text-decoration: none;
-    margin: 0 1.5em;
-    font-size: 1.25em;
+
+#profile-link:hover {
+    transform: translateY(-2px);
   }
+
+/* profile class should become id when projects are ready */
+
+.profile-link {
+  text-decoration: none;
+  margin: 0 1.5em;
+  font-size: 1.25em;
+  color: white;
+}
+
+.profile-link:hover {
+    transform: translateY(-2.5px);
+    transition: transform 0.3s ease-out;
+  }
+  
 
 @media (max-width: 600px) {
   html {
