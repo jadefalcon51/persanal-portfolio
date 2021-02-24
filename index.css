@@ -9,12 +9,12 @@ html {
 }
 
 :root {
-    --darkbu1: #09090d;
-    --darkbu2: #295073;
-    --lightbu1: #283540;
-    --lightbu2: #5888a6;
-    --gray: #5c5f65;
-  }
+  --darkbu1: #09090d;
+  --darkbu2: #295073;
+  --lightbu1: #283540;
+  --lightbu2: #5888a6;
+  --gray: #5c5f65;
+}
 
 body {
   font-family: "ubuntu", sans-serif;
@@ -39,7 +39,8 @@ body {
 
 .nav-list-items {
   text-decoration: none;
-  padding: 0.75em;
+  color: #ddd;
+  padding: 0.75em 1.25em;
   font-size: 1.5em;
 }
 
@@ -91,7 +92,7 @@ figcaption {
   padding: 12px 0px 12px 0px;
   background-color: var(--darkbu1);
   color: #ddd;
-  position: relative; 
+  position: relative;
   top: -6px;
 }
 
@@ -131,10 +132,9 @@ figcaption {
   color: #ddd;
 }
 
-
 #profile-link:hover {
-    transform: translateY(-2px);
-  }
+  transform: translateY(-2px);
+}
 
 /* profile class should become id when projects are ready */
 
@@ -142,14 +142,21 @@ figcaption {
   text-decoration: none;
   margin: 0 1.5em;
   font-size: 1.25em;
-  color: white;
+  color: #ddd;
 }
 
 .profile-link:hover {
-    transform: translateY(-2.5px);
-    transition: transform 0.3s ease-out;
-  }
-  
+  transform: translateY(-2.5px);
+  transition: transform 0.3s ease-out;
+}
+
+footer {
+  height: 40px;
+  background-color: var(--gray);
+  color: #ddd;
+  border-top: 0.25em solid #09090d;
+  padding: 2em 2em 0 2em;
+}
 
 @media (max-width: 600px) {
   html {
