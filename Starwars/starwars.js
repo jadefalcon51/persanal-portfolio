@@ -1,5 +1,10 @@
 import { films } from '../data/films.js'
 
-let itemOne = document.querySelector('#item1');
+let titlelist = document.querySelector('.titleList');
 
-itemOne.textContent = films[0].title
+for (var i = 0; i < films.length; i++) {
+    let title = films [i].title
+    let newItem = document.createElement ('li')
+    newItem.textContent = title
+    titlelist.appendChild(newItem)
+}
