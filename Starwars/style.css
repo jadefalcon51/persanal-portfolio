@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: cornsilk;
+}
+
+body {
+    background-color: black; 
+}
+
+.titleList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+figure {
+    margin: 1em;
+}
+
+figcaption {
+    text-align: center;
+    background-color: black;
+    color: cornsilk;
+}
+
