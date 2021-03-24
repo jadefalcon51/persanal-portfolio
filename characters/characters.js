@@ -2,7 +2,27 @@ import { people } from '../data/people.js'
 
 const mainContent = document.querySelector ('main')
 
-people.forEach (person => {
+const mainHeader = document.createElement('deader')
+
+const maleButton = document.createElement('button')
+maleButton.textContent = 'Male Characters'
+mainHeader.appendChild(maleButton)
+document.body.insertBefore(mainHeader, mainContent)
+maleButton.addEventListener('click', () => {
+    populatDom (mailCharacters)
+})
+
+
+const mailCharacters = people.filter (person => person.gender === 'male')
+const femailCharacters = people.filter (person => person.gender === 'female')
+const otherCharacters = people.filter (person => {
+    if (person.gender === 'n/a' || person.gender === 'none') {
+        return person
+    }
+})
+
+function populatDom(characters) {
+ characters.forEach (person => {
     const charFigure = document.createElement('figure')
     const charImg = document.createElement('img')
     const charCaption = document.createElement('figcaption')
@@ -15,7 +35,8 @@ people.forEach (person => {
     charFigure.appendChild(charCaption)
     mainContent.appendChild(charFigure)
 })
-    
+}
+
 function getLastNumber(url) {
     let end = url.lastIndexOf('/')
     let start = end - 2
