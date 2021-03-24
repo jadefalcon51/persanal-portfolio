@@ -4,16 +4,20 @@ const mainContent = document.querySelector ('main')
 
 const mainHeader = document.createElement('deader')
 
+document.body.insertBefore(mainHeader, mainContent)
+
 const maleButton = document.createElement('button')
 maleButton.textContent = 'Male Characters'
+maleButton.addEventListener('click', () => populatDom (maleCharacters))
 mainHeader.appendChild(maleButton)
-document.body.insertBefore(mainHeader, mainContent)
-maleButton.addEventListener('click', () => {
-    populatDom (mailCharacters)
-})
 
-const mailCharacters = people.filter (person => person.gender === 'male')
-const femailCharacters = people.filter (person => person.gender === 'female')
+const femaleButton = document.createElement('button')
+femaleButton.textContent = 'Female Characters'
+femaleButton.addEventListener('click', () => populatDom (femaleCharacters))
+mainHeader.appendChild(femaleButton)
+
+const maleCharacters = people.filter (person => person.gender === 'male')
+const femaleCharacters = people.filter (person => person.gender === 'female')
 const otherCharacters = people.filter (person => {
     if (person.gender === 'n/a' || person.gender === 'none') {
         return person
@@ -21,7 +25,8 @@ const otherCharacters = people.filter (person => {
 })
 
 function populatDom(characters) {
- characters.forEach (person => {
+    removeChildren(mainContent)
+    characters.forEach (person => {
     const charFigure = document.createElement('figure')
     const charImg = document.createElement('img')
     const charCaption = document.createElement('figcaption')
@@ -44,3 +49,8 @@ function getLastNumber(url) {
     }
     return url.slice(start, end)
 }
+
+function removeChildren(container) {
+    while (container.firstChild)
+    container.removeChild(container.firstChild) 
+} 
