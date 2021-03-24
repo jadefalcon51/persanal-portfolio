@@ -12,7 +12,6 @@ maleButton.addEventListener('click', () => {
     populatDom (mailCharacters)
 })
 
-
 const mailCharacters = people.filter (person => person.gender === 'male')
 const femailCharacters = people.filter (person => person.gender === 'female')
 const otherCharacters = people.filter (person => {
