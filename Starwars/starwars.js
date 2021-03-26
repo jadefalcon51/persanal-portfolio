@@ -11,7 +11,7 @@ for (let i = 0; i < films.length; i++) {
     newIimage.src = `https://starwars-visualguide.com/assets/img/films/${i + 1}.jpg`
     figCaption.textContent = foundFilm.title
 
-    titlelist.appendChild(newIimage)   
+    figure.appendChild(newIimage)   
     figure.appendChild(figCaption)
     titlelist.appendChild(figure) 
 }

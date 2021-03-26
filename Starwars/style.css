@@ -1,12 +1,17 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    color: cornsilk;
+    font-family: lato;
 }
 
 h1 {
-    color: cornsilk;
+    margin-left: 48vw;
+    text-align: center;
+    margin: 75px;
+    padding: .5em 0em;
 }
-
+    
 body {
     background-color: black; 
 }
@@ -17,12 +22,16 @@ body {
 }
 
 figure {
-    margin: 1em;
+    margin: 4em;
 }
 
 figcaption {
     text-align: center;
-    background-color: black;
     color: cornsilk;
+    margin: 25px;
+}
+
+img {
+    width: 300px;
 }
 
