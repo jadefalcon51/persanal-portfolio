@@ -1,4 +1,5 @@
 import { people } from '../data/people.js'
+import { removeChildren, getLastNumber } from '../Utils/index.js'
 
 const mainContent = document.querySelector ('main')
 
@@ -46,7 +47,7 @@ function populatDom(characters) {
 })
 }
 
-function getLastNumber(url) {
+/* function getLastNumber(url) {
     let end = url.lastIndexOf('/')
     let start = end - 2
     if (url.charAt(start) === '/') {
@@ -58,4 +59,4 @@ function getLastNumber(url) {
 function removeChildren(container) {
     while (container.firstChild)
     container.removeChild(container.firstChild) 
-} 
+} */

@@ -1,4 +1,5 @@
 import { films } from '../data/films.js'
+import { getLastNumber } from '../Utils/index.js'
 
 let titlelist = document.querySelector('.titleList');
 
@@ -15,7 +16,7 @@ for (let i = 0; i < films.length; i++) {
     titlelist.appendChild(figure) 
 }
 
-function getLastNumber(url) {
+/* function getLastNumber(url) {
     let end = url[url.length -2]
     return parseInt(end, 10)
-}
+}*/
