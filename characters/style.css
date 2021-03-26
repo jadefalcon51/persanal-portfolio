@@ -1,6 +1,15 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    background-color: #070d12;
+    color: #ffd700;
+}
+
+h1 {
+    margin-left: 48vw;
+    text-align: center;
+    margin: 75px;
+    padding: .5em 0em;
 }
 
 #main {
@@ -10,4 +19,29 @@
 
 figure > img {
     height: 200px;
+    margin: 15px 50px;
+    border-radius: 15px;
+}
+
+figure {
+    margin: 20px 50px;
+
+}
+
+figcaption {
+    text-align: center;
+}
+
+button {
+margin: 15px 15px;
+padding: 1em;
+border-radius: 15px;
+color: black;
+background-color: #ffd700;
+text-shadow: .5px .5px 1px gray;
+}
+
+Button:hover {
+    transform: translateY(-2.5px);
+    transition: transform 0.3s ease-out;
 }
