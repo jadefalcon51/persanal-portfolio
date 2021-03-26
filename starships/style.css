@@ -3,18 +3,27 @@
     box-sizing: border-box;
 }
 
+h1 {
+    color: #eee;
+    margin-left: 48vw;
+    text-align: center;
+    margin: 75px;
+    padding: .5em 0em;
+    border-radius: 10px 25px;
+    width: 450px;
+    background-color: rgba(14, 77, 146, .8);
+}
+
 main {
     display: flex;
     height: 100vh;
 }
 
-img, nav {
+
+img, nav, h1 {
     z-index: 1;
     position: relative;
-}
-
-h1 {
-    color: #eee;
+    border-radius: 7.5px;
 }
 
 a {
@@ -25,4 +34,19 @@ a {
 
 li {
     list-style-type: none;
+    text-align: center;
+    margin: 5px 45px;
+    padding: .5em 1em;
+    background-color: rgba(14, 77, 146, .8);
+    margin-top: 2em;
+    border-radius: 15px;
+}
+
+li:hover {
+    transform: translateY(-2.5px);
+    transition: transform 0.3s ease-out;
+}
+
+footer {
+    height: 100px;
 }
