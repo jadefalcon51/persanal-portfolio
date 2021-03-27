@@ -46,3 +46,9 @@ Button:hover {
     transform: translateY(-2.5px);
     transition: transform 0.3s ease-out;
 }
+
+.buttonRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

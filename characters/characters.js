@@ -3,7 +3,8 @@ import { removeChildren, getLastNumber } from '../Utils/index.js'
 
 const mainContent = document.querySelector ('main')
 
-const mainHeader = document.createElement('deader')
+const mainHeader = document.createElement('header')
+mainHeader.className = 'buttonRow'
 
 document.body.insertBefore(mainHeader, mainContent)
 
@@ -47,16 +48,4 @@ function populatDom(characters) {
 })
 }
 
-/* function getLastNumber(url) {
-    let end = url.lastIndexOf('/')
-    let start = end - 2
-    if (url.charAt(start) === '/') {
-        start ++
-    }
-    return url.slice(start, end)
-}
 
-function removeChildren(container) {
-    while (container.firstChild)
-    container.removeChild(container.firstChild) 
-} */
