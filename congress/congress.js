@@ -37,7 +37,18 @@ function getSimplifiedPeople(peopleList) {
         return {
             id: person.id,
             name: `${person.first_name}${middleName} ${person.last_name}`,
-
+            imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-100px.jpeg`,
+            seniority: parseInt(person.seniority, 10),
+            party: person.party,
+            missed_votes_pct: person.missed_votes_pct
         }
     })
+}
+
+function senioritySort() {
+    populateCongressDiv(getSimplifiedPeople(senators).sort((a, b) => a.seniority - b.seniority).reverse())
+}
+
+const filterCongressPeople = (chamber, politicalParty) => {
+   return getSimplifiedPeople(chamber).filter(member => member.party === politicalParty)
 }
