@@ -45,7 +45,7 @@ function populateCongressDiv(simlifiedList) {
 
 function getSimplifiedPeople(peopleList) {
     return peopleList.map(person => {
-        let middleName = person.middle_name / ` ${person.middle_name}` : `` 
+        let middleName = person.middle_name ? ` ${person.middle_name}` : `` 
         return {
             id: person.id,
             name: `${person.first_name}${middleName} ${person.last_name}`,
