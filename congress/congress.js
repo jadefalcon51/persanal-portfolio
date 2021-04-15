@@ -5,6 +5,18 @@ import { removeChildren } from "../Utils/index.js"
 const congressGrid = document.querySelector('.congressGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
 const birthdayButton = document.querySelector('#birthdayButton')
+const republicansButton = document.querySelector('#republicans')
+const missedVotes = document.querySelector('#missedVotes')
+
+republicansButton.addEventListener('click', () => {
+    populateCongressDiv(filterCongressPeople(representatives, 'R'))
+})
+
+missedVotes.addEventListener('click', () => {
+    console.log(missedVotesMember(senators))
+    //missing content figure out what I want button to do
+}
+)
 
 seniorityButton.addEventListener('click', () => senioritySort())
 
@@ -51,4 +63,9 @@ function senioritySort() {
 
 const filterCongressPeople = (chamber, politicalParty) => {
    return getSimplifiedPeople(chamber).filter(member => member.party === politicalParty)
+}
+
+const missedVotesMember = (chamber) => {
+    const highestMissedVotesPerson = getSimplifiedPeople(chamber).reduce((acc, member) => acc.missed_votes_pct > member.missedVotesMember ? acc : member)
+    return getSimplifiedPeople(chamber).filter((person) => person.missed_votes_pct === highestMissedVotesPerson.missed_votes_pct)
 }
