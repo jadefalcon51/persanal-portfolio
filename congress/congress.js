@@ -69,3 +69,5 @@ const missedVotesMember = (chamber) => {
     const highestMissedVotesPerson = getSimplifiedPeople(chamber).reduce((acc, member) => acc.missed_votes_pct > member.missedVotesMember ? acc : member)
     return getSimplifiedPeople(chamber).filter((person) => person.missed_votes_pct === highestMissedVotesPerson.missed_votes_pct)
 }
+
+populateCongressDiv(getSimplifiedPeople(senators))
