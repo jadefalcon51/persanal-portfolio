@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
-    src="https://kit.fontawesome.com/9f3880ef33.js"
-    crossorigin="anonymous"
+      src="https://kit.fontawesome.com/9f3880ef33.js"
+      crossorigin="anonymous"
     ></script>
-    <link href="style.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet" />
     <title>People of Congress</title>
-</head>
-<body>
+  </head>
+  <body>
     <head>
-    <h1>Peopple of Congress</h1>
-    <div class="buttonheader">
+      <h1>Peopple of Congress</h1>
+      <div class="chamberHeader">
+        <button id='representatives'>Representatives</button>
+        <button id='senators'>Senators</button>
+      </div>
+      <div class="buttonHeader">
         <button id="republicans">Republicans</button>
-        <button id="democrast">Democrast</button>
+        <button id="democrats">Democrats</button>
         <button id="independents">Independents</button>
         <button id="seniorityButton">Sort by seniority</button>
         <button id="birthdayButton">Sort by Birthday</button>
         <button id="missedVotes">Highest Missed Votes %</button>
-    </div>
-</head>
-<main>
-    <div class="congressGrid"></div>
-</main>
+      </div>
+    </head>
+    <main>
+      <div class="congressGrid"></div>
+    </main>
     <script src="congress.js" type="module"></script>
-</body>
+  </body>
 </html>

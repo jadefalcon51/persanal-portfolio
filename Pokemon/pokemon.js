@@ -24,3 +24,19 @@ class pokemon {
         this.moves = moves
     }
 }
+
+newButton.addEventListener('click', () => {
+    let pokeName = prompt("What is the name of your new Pokemon?")
+    let pokeHeight = prompt("Pokemon height?")
+    let pokeWeight = prompt("Pokemon Weight?")
+    let newPokemon = new pokemon(
+        pokeName,
+        pokeHeight,
+        pokeWeight,
+        ['eat', 'sleep'],
+        ['study', 'code', 'silence']
+    )
+    populatePokeCard(newPokemon)
+})
+
+

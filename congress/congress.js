@@ -1,28 +1,57 @@
-import { senators } from "../data/senators.js"
-import { representatives } from "../data/representatives.js"
-import { removeChildren } from "../Utils/index.js"
+import { senators } from '../data/senators.js'
+import { representatives } from '../data/representatives.js'
+import { removeChildren } from '../Utils/index.js'
 
+const representativesSelect = document.querySelector('#representatives')
+const senatorsSelect = document.querySelector('#senators')
 const congressGrid = document.querySelector('.congressGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
 const birthdayButton = document.querySelector('#birthdayButton')
 const republicansButton = document.querySelector('#republicans')
-const missedVotes = document.querySelector('#missedVotes')
+//const missedVotes = document.querySelector('#missedVotes')
+const democratsButton = document.querySelector('#democrats')
+const independentsButton = document.querySelector('#independents')
 
-republicansButton.addEventListener('click', () => {
-    populateCongressDiv(filterCongressPeople(representatives, 'R'))
+let state = 'representatives'
+
+function houseChooser (house) {
+    if (house === 'representatives')
+        return representatives
+    return senators
+}
+
+representativesSelect.addEventListener('click', () => {
+    state = 'representatives'
+    populateCongressDiv(getSimplifiedPeople(houseChooser(state)))
 })
 
-missedVotes.addEventListener('click', () => {
-    console.log(missedVotesMember(senators))
-    //missing content figure out what I want button to do
-}
-)
+senatorsSelect.addEventListener('click', () => {
+    state = 'senators'
+    populateCongressDiv(getSimplifiedPeople(houseChooser(state)))
+})
+
+republicansButton.addEventListener('click', () => {
+    populateCongressDiv(filterCongressPeople(houseChooser(state), 'R'))
+})
+
+democratsButton.addEventListener('click', () => {
+    populateCongressDiv(filterCongressPeople(houseChooser(state), 'D'))
+})
+
+independentsButton.addEventListener('click', () => {
+    populateCongressDiv(filterCongressPeople(houseChooser(state), 'ID'))
+})
+
+ missedVotes.addEventListener('click', () => {
+    populateCongressDiv(missedVotesMember(houseChooser(state)))
+    console.log(missedVotesMember(houseChooser(state)))
+ })
 
 seniorityButton.addEventListener('click', () => senioritySort())
 
-function populateCongressDiv(simlifiedList) {
+function populateCongressDiv(simplifiedList) {
     removeChildren(congressGrid)
-    simplifiedLis.forEach(person => {
+    simplifiedList.forEach(person => {
         let personDiv = document.createElement('div')
         personDiv.className = 'figureDiv'
         let perosnFig = document.createElement('figure')
@@ -58,16 +87,17 @@ function getSimplifiedPeople(peopleList) {
 }
 
 function senioritySort() {
-    populateCongressDiv(getSimplifiedPeople(senators).sort((a, b) => a.seniority - b.seniority).reverse())
+    populateCongressDiv(getSimplifiedPeople(houseChooser(state)).sort((a, b) => a.seniority - b.seniority).reverse())
 }
 
 const filterCongressPeople = (chamber, politicalParty) => {
+    console.log(getSimplifiedPeople(chamber))
    return getSimplifiedPeople(chamber).filter(member => member.party === politicalParty)
 }
 
-const missedVotesMember = (chamber) => {
-    const highestMissedVotesPerson = getSimplifiedPeople(chamber).reduce((acc, member) => acc.missed_votes_pct > member.missedVotesMember ? acc : member)
-    return getSimplifiedPeople(chamber).filter((person) => person.missed_votes_pct === highestMissedVotesPerson.missed_votes_pct)
-}
+// const missedVotesMember = (chamber) => {
+//     const highestMissedVotesPerson = getSimplifiedPeople(chamber).reduce((acc, member) => acc.missed_votes_pct > member.missedVotesMember ? acc : member)
+//     return getSimplifiedPeople(chamber).filter((person) => person.missed_votes_pct === highestMissedVotesPerson.missed_votes_pct)
+// }
 
-populateCongressDiv(getSimplifiedPeople(senators))
+populateCongressDiv(getSimplifiedPeople(houseChooser(state)))
