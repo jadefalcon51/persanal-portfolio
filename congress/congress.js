@@ -6,7 +6,7 @@ const representativesSelect = document.querySelector('#representatives')
 const senatorsSelect = document.querySelector('#senators')
 const congressGrid = document.querySelector('.congressGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
-const birthdayButton = document.querySelector('#birthdayButton')
+//const birthdayButton = document.querySelector('#birthdayButton')
 const republicansButton = document.querySelector('#republicans')
 //const missedVotes = document.querySelector('#missedVotes')
 const democratsButton = document.querySelector('#democrats')
@@ -42,10 +42,10 @@ independentsButton.addEventListener('click', () => {
     populateCongressDiv(filterCongressPeople(houseChooser(state), 'ID'))
 })
 
- missedVotes.addEventListener('click', () => {
-    populateCongressDiv(missedVotesMember(houseChooser(state)))
-    console.log(missedVotesMember(houseChooser(state)))
- })
+//  missedVotes.addEventListener('click', () => {
+//     populateCongressDiv(missedVotesMember(houseChooser(state)))
+//     console.log(missedVotesMember(houseChooser(state)))
+//  })
 
 seniorityButton.addEventListener('click', () => senioritySort())
 
