@@ -1,11 +1,14 @@
 * {
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;  
 }
 
 h1 {
     text-align: center;
-    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 175px;
 }
 
 .chamberHeader {
@@ -14,10 +17,24 @@ h1 {
     justify-content: center;
 }
 
+.buttonHeader {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
 button {
     width: 150px;
     height: 50px;
     font-size: 12px;
+    margin-right: 50px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+}
+
+Button:hover {
+    transform: translateY(-2.5px);
+    transition: transform 0.3s ease-out;
 }
 
 .congressGrid {
@@ -26,10 +43,16 @@ button {
 }
 
 .figureDiv {
-    margin: 5px;
-    padding: 5px;
+    margin: 15px;
+    padding: 0px;
     border: 2px solid greed;
     box-shadow: 3px 3px 3px black;
+    text-align: center;
+    border-radius: 10px;
+}
+
+img {
+    border-radius: 10px;
 }
 
 figure {
