@@ -1,56 +1,84 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  color: #ffcb05;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+button {
+  height: 50px;
+  margin-bottom: 25px;
+  margin: 25px;
+  background-color: #ffcb05;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border:rgb(195, 195, 236);
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
 }
 
 .pokeGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .scene {
-    width: 200px;
-    height: 260px;
-    border: 1px solid green;
-    margin: 8px;
-    perspective: 600px;
+  width: 200px;
+  height: 260px;
+  margin: 8px;
+  perspective: 600px;
 }
 
 .card {
-    width: 100%;
-    height: 100%;
-    transition: trasform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
 }
 
 .card.is-flipped {
-    transform: rotateY(180deg)
+  transform: rotateY(180deg);
 }
 
-.card_face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-weight: bold;
-    backface-visibility: hidden;
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: bold;
+  backface-visibility: hidden;
+  border-radius: 25px;
 }
 
-.card_face--front {
-    background: red;
-    padding-top: 8px;
+.card__face--front {
+  padding-top: 8px;
 }
 
-.card_face--front img {
-    height: 190px;
-    width: 190px;
+.card__face--front img {
+  height: 190px;
+  width: 190px;
 }
 
-.card_face--back {
-    background: blue;
-    transform: rotateY(180deg);
+.card__face--back {
+  background: rgb(195, 195, 236);
+  transform: rotateY(180deg);
 }
