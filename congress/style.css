@@ -1,6 +1,7 @@
 * {
     margin: 0;
-    box-sizing: border-box;  
+    box-sizing: border-box;
+    font-family: 'Antonio', sans-serif;  
 }
 
 h1 {
@@ -30,11 +31,23 @@ button {
     margin-right: 50px;
     border-radius: 10px;
     box-shadow: 3px 3px 3px black;
+    font-size: 16px;
 }
+
 
 Button:hover {
     transform: translateY(-2.5px);
     transition: transform 0.3s ease-out;
+}
+
+#representatives {
+    background-color: #bf0a30;
+    color: white;
+}
+
+#senators {
+    background-color: #002868;
+    color: white;
 }
 
 .congressGrid {
