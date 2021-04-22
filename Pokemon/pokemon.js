@@ -15,13 +15,14 @@ fetchButton.addEventListener("click", () => {
 });
 
 class pokemon {
-  constructor(name, height, weight, abilities, moves) {
+  constructor(name, height, weight, abilities, moves, types) {
     this.id = 900;
     this.name = name;
     this.height = height;
     this.weight = weight;
     this.abilities = abilities;
     this.moves = moves;
+    this.types = types;
   }
 }
 
@@ -34,8 +35,13 @@ newButton.addEventListener("click", () => {
     pokeHeight,
     pokeWeight,
     ["eat", "sleep"],
-    ["study", "code", "silence"]
-  );
+    ["study", "code", "silence"],
+    [{
+      type: {
+        name: 'normal'
+      }
+    }],
+  )
   populatePokeCard(newPokemon);
 });
 
