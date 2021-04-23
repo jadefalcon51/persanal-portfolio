@@ -82,4 +82,11 @@ header {
 .card__face--back {
   background: rgb(195, 195, 236);
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.backtype {
+    margin-bottom: 10px;
 }
