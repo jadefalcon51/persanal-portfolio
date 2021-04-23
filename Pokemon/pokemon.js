@@ -79,11 +79,10 @@ function getAbilitiesArray(commaString) {
 
 async function getAPIData(url) {
   try {
-    const response = await fetch(url) // try getting data from the API at the url provided
-    const data = await response.json() // convert the response into JSON
-    return data // return the data from the function to whoever called it
+    const response = await fetch(url) 
+    const data = await response.json() 
+    return data 
   } catch (error) {
-    // must have been an error
     console.log(error)
     alert('Could not find that data')
   }
@@ -103,7 +102,6 @@ function loadPage(offset, limit) {
 }
 
 function populatePokeCard(singlePokemon) {
-  // use the same html as in the CodePen Card flip example
   let pokeScene = document.createElement('div')
   pokeScene.className = 'scene'
   let pokeCard = document.createElement('div')
@@ -111,11 +109,8 @@ function populatePokeCard(singlePokemon) {
   pokeCard.addEventListener('click', () => {
     pokeCard.classList.toggle('is-flipped')
   })
-  // make the card front
   pokeCard.appendChild(populateCardFront(singlePokemon))
-  // make the card back
   pokeCard.appendChild(populateCardBack(singlePokemon))
-  // append them all to pokeGrid
   pokeScene.appendChild(pokeCard)
   pokeGrid.appendChild(pokeScene)
 }
@@ -169,7 +164,6 @@ function populateCardBack(pokemon) {
   pokeBack.appendChild(backLabel)
 
   pokemon.types.forEach((pokeType) => {
-    //console.log(pokeType.type.name)
     let backType = document.createElement('p')
     backType.textContent = pokeType.type.name
     pokeBack.appendChild(backType)
@@ -180,7 +174,6 @@ function populateCardBack(pokemon) {
   pokeBack.appendChild(typeLabel)
 
   pokemon.abilities.forEach((pokeAbility) => {
-    //console.log(pokeType.type.name)
     let abilityType = document.createElement('p')
     abilityType.textContent = pokeAbility.ability.name
     pokeBack.appendChild(abilityType)
