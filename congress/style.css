@@ -4,7 +4,13 @@
     font-family: 'Antonio', sans-serif;  
 }
 
+body {
+    background-image: url("../images/flag3.jpg");
+}
+
 h1 {
+    color: white;
+    text-shadow: 2px 2px 3px black;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -13,7 +19,7 @@ h1 {
 }
 
 .chamberHeader {
-    height: 150px;
+    height: 100px;
     display: flex;
     justify-content: center;
 }
@@ -62,6 +68,7 @@ Button:hover {
     box-shadow: 3px 3px 3px black;
     text-align: center;
     border-radius: 10px;
+    background-color: white;
 }
 
 img {
