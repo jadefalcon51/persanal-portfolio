@@ -5,12 +5,13 @@
 }
 
 body {
-    background-image: url("../images/flag3.jpg");
+    /* background-image: url("../images/flag3.jpg"); */
+    background-color: #333;
 }
 
 h1 {
     color: white;
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 3px 3px 3px black;
     text-align: center;
     display: flex;
     flex-direction: column;
