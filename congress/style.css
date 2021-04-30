@@ -85,13 +85,14 @@ img {
 }
 
 figure {
-    width: 100px;
+    width: 200px;
+    font-size: larger;
 }    
 
-figcaption {
+/* figcaption {
     display: flex;
     justify-content: space-between;
-}
+}  */
 
 .fa-republican {
     color: red;
